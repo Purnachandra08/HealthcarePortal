@@ -1,0 +1,9 @@
+# Ignore sensitive configs
+/config/
+config/*.properties
+
+# Ignore build and IDE files
+/target/
+.classpath
+.project
+.settings/
