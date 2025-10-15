@@ -306,7 +306,7 @@
   <!-- ===== Footer ===== -->
   <footer>
     &copy; 2025 Healthcare Portal. All Rights Reserved. | Designed with ❤️ by 
-    <a href="#">YourTeam</a>
+    <a href="#">Sipun</a>
   </footer>
 
   <!-- ===== JavaScript ===== -->

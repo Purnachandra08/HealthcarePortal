@@ -30,7 +30,7 @@ public class AuthServlet extends HttpServlet {
             switch (role) {
                 case "user": query = "SELECT * FROM users WHERE email = ?"; break;
                 case "doctor": query = "SELECT * FROM doctors WHERE email = ?"; break;
-                case "admin": query = "SELECT * FROM admins WHERE username = ?"; break;
+                case "admin": query = "SELECT * FROM admins WHERE email = ?"; break;
                 default:
                     req.setAttribute("error", "Invalid role!");
                     req.getRequestDispatcher("login.jsp").forward(req, res);
