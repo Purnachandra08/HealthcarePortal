@@ -24,7 +24,7 @@
       --gradient: radial-gradient(circle at 80% 40%, rgba(0,123,255,0.1), transparent 70%);
     }
     *{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
-    body{background:var(--bg-color);color:var(--text);transition:0.4s;}
+    body{background:var(--bg-color);color:var(--text);transition:0.4s;display:flex;flex-direction:column;min-height:100vh;}
     a{text-decoration:none;color:var(--accent);}
     
     /* Navbar */
@@ -32,7 +32,7 @@
       position:fixed;
       top:0; left:0; right:0;
       padding:15px 50px;
-      background:rgba(15,15,15,0.9);
+      background:rgba(15,15,15,0.95);
       backdrop-filter:blur(12px);
       display:flex;
       justify-content:space-between;
@@ -55,8 +55,11 @@
     .theme-toggle:hover{background:var(--accent);color:#0d1117;}
 
     /* Dashboard container */
-    .dashboard-container{
+    main{
+      flex:1;
       padding:140px 50px 50px;
+    }
+    .dashboard-container{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:30px;
@@ -67,11 +70,12 @@
       background:var(--card-color);
       padding:35px 25px;
       border-radius:16px;
-      box-shadow:0 10px 20px rgba(0,0,0,0.3);
+      box-shadow:0 10px 25px rgba(0,0,0,0.3);
       transition:all 0.4s ease;
       text-align:center;
       position:relative;
       overflow:hidden;
+      cursor:pointer;
     }
     .card::before{
       content:"";
@@ -87,12 +91,12 @@
     }
     .card:hover{
       transform:translateY(-10px);
-      box-shadow:0 15px 30px rgba(0,188,212,0.4);
+      box-shadow:0 15px 35px rgba(0,188,212,0.4);
     }
     .card h3{color:var(--accent);margin-bottom:12px;font-size:1.3rem;}
     .card p{color:var(--muted);margin-bottom:18px;font-size:0.95rem;}
 
-    /* Button style inside card */
+    /* Button inside card */
     .card .btn{
       display:inline-block;
       padding:10px 22px;
@@ -111,15 +115,17 @@
 
     /* Footer */
     footer{
-      background:rgba(15,15,15,0.9);
+      background:rgba(15,15,15,0.95);
       backdrop-filter:blur(8px);
       color:var(--muted);
       text-align:center;
-      padding:25px 10px;
+      padding:20px 10px;
       font-size:.95rem;
       border-top:1px solid rgba(255,255,255,0.1);
       margin-top:auto;
     }
+    footer a{color:var(--accent);text-decoration:none;}
+    footer a:hover{text-decoration:underline;}
   </style>
 </head>
 <body>
@@ -153,6 +159,7 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Healthcare Portal. All Rights Reserved. | Designed with ❤️ by <a href="#">YourTeam</a>
   </footer>
